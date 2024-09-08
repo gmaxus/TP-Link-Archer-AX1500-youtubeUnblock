@@ -1,5 +1,9 @@
 # youtubeUnblock on TP-Link Archer AX1500
 
+## Get telnet root
+
+https://github.com/gmaxus/TP-Link-Archer-AX1500-telnet-root
+
 ### Telnet to router
 ```text
 telnet 192.168.0.1
