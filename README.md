@@ -9,7 +9,7 @@ telnet 192.168.0.1
 ```text
 mkdir -p /tmp/dpi/var/lock
 cd /tmp/dpi
-wget http://xerocop.ru/youtubeUnblock_0.3.2-model_brcm_bcm490x-1_model_brcm_bcm490x.ipk
+wget http://thisismypage.ru/gitz/youtubeUnblock_0.3.2-model_brcm_bcm490x-1_model_brcm_bcm490x.ipk
 ```
 
 ### Install
