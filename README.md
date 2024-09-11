@@ -18,7 +18,7 @@ wget http://xerocop.ru/youtubeUnblock_0.3.2-model_brcm_bcm490x-1_model_brcm_bcm4
 
 ### Install
 ```text
-opkg install youtubeUnblock_0.3.2-model_brcm_bcm490x-1_model_brcm_bcm490x.ipk -o /tmp/dpi --force-depends --nodeps
+opkg install youtubeUnblock_0.3.2-model_brcm_bcm490x-1_model_brcm_bcm490x.ipk -o /tmp/dpi --force-space --nodeps
 ```
 
 ### Iptables configuration
