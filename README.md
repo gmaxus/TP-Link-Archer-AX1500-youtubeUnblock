@@ -30,7 +30,7 @@ iptanles -I OUTPUT -m mark 32768/32768 -j ACCEPT
 ### Run youtubeUnblock
 For Youtube only.
 ```text
-/tmp/dpi/youtubeUnblock
+/tmp/dpi/usr/bin/youtubeUnblock
 ```
 
 For all sites.
