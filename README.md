@@ -1,4 +1,4 @@
-# youtubeUnblock on TP-Link Archer AX1500
+# youtubeUnblock on TP-Link Archer AX10 (AX1500)
 
 ## Get telnet root
 
