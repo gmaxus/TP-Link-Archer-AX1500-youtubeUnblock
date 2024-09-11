@@ -35,7 +35,7 @@ For Youtube only.
 
 For all sites.
 ```text
-/tmp/dpi/youtubeUnblock --sni-domains=all
+/tmp/dpi/usr/bin/youtubeUnblock --sni-domains=all
 ```
 
 # LINKS
