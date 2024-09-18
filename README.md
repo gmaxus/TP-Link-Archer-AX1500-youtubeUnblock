@@ -24,19 +24,21 @@ opkg install youtubeUnblock_0.3.2-model_brcm_bcm490x-1_model_brcm_bcm490x.ipk -o
 ### Iptables configuration
 ```text
 iptables -t mangle -A FORWARD -p tcp --dport 443 -m connbytes --connbytes-dir original --connbytes-mode packets --connbytes 0:19 -j NFQUEUE --queue-num 537 --queue-bypass
-iptables -I OUTPUT -m mark 32768/32768 -j ACCEPT
+iptables -I OUTPUT -m mark --mark 32768/32768 -j ACCEPT
 ```
 
 ### Run youtubeUnblock
-For Youtube only.
+for Youtube only
 ```text
 /tmp/dpi/usr/bin/youtubeUnblock &
 ```
 
-For all sites.
+for all sites
 ```text
 /tmp/dpi/usr/bin/youtubeUnblock --sni-domains=all &
 ```
+
+close telnet window
 
 # LINKS
 https://github.com/Waujito/youtubeUnblock
