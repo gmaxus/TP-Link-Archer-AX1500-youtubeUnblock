@@ -18,6 +18,14 @@ iptables -t mangle -A POSTROUTING -j YOUTUBEUNBLOCK
 iptables -I OUTPUT -m mark --mark 32768/32768 -j ACCEPT
 ```
 
+### Iptables V.6 configuration if you needed
+```text
+ip6tables -t mangle -N YOUTUBEUNBLOCK
+ip6tables -t mangle -A YOUTUBEUNBLOCK -p tcp --dport 443 -m connbytes --connbytes-dir original --connbytes-mode packets --connbytes 0:19 -j NFQUEUE --queue-num 537 --queue-bypass
+ip6tables -t mangle -A YOUTUBEUNBLOCK -p udp --dport 443 -m connbytes --connbytes-dir original --connbytes-mode packets --connbytes 0:19 -j NFQUEUE --queue-num 537 --queue-bypass
+ip6tables -t mangle -A POSTROUTING -j YOUTUBEUNBLOCK
+ip6tables -I OUTPUT -m mark --mark 32768/32768 -j ACCEPT
+```
 ### Download
 ```text
 mkdir -p /tmp/dpi
