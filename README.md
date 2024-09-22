@@ -9,33 +9,33 @@ https://github.com/gmaxus/TP-Link-Archer-AX1500-telnet-root
 telnet 192.168.0.1
 ```
 
-### Download
-```text
-mkdir -p /tmp/dpi/var/lock
-cd /tmp/dpi
-wget http://xerocop.ru/youtubeUnblock_0.3.2-model_brcm_bcm490x-1_model_brcm_bcm490x.ipk
-```
-
-### Install
-```text
-opkg install youtubeUnblock_0.3.2-model_brcm_bcm490x-1_model_brcm_bcm490x.ipk -o /tmp/dpi --force-space --nodeps
-```
-
 ### Iptables configuration
 ```text
-iptables -t mangle -A FORWARD -p tcp --dport 443 -m connbytes --connbytes-dir original --connbytes-mode packets --connbytes 0:19 -j NFQUEUE --queue-num 537 --queue-bypass
+iptables -t mangle -N YOUTUBEUNBLOCK
+iptables -t mangle -A YOUTUBEUNBLOCK -p tcp --dport 443 -m connbytes --connbytes-dir original --connbytes-mode packets --connbytes 0:19 -j NFQUEUE --queue-num 537 --queue-bypass
+iptables -t mangle -A YOUTUBEUNBLOCK -p udp --dport 443 -m connbytes --connbytes-dir original --connbytes-mode packets --connbytes 0:19 -j NFQUEUE --queue-num 537 --queue-bypass
+iptables -t mangle -A POSTROUTING -j YOUTUBEUNBLOCK
 iptables -I OUTPUT -m mark --mark 32768/32768 -j ACCEPT
 ```
+
+### Download
+```text
+mkdir -p /tmp/dpi
+cd /tmp/dpi
+wget http://xerocop.ru/git/youtubeUnblock
+chmod -R 777 /tmp/dpi
+```
+
 
 ### Run youtubeUnblock
 for Youtube only
 ```text
-/tmp/dpi/usr/bin/youtubeUnblock &
+/tmp/dpi/youtubeUnblock &
 ```
 
 for all sites
 ```text
-/tmp/dpi/usr/bin/youtubeUnblock --sni-domains=all &
+/tmp/dpi/youtubeUnblock --sni-domains=all &
 ```
 
 close telnet window
