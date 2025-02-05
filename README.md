@@ -38,12 +38,13 @@ chmod -R 777 /tmp/dpi
 ### Run youtubeUnblock
 for Youtube only
 ```text
-/tmp/dpi/youtubeUnblock --fake-sni-type=custom --fake-custom-payload=00 --fake-sni-seq-len=10 --frag-sni-faked=1 --frag-sni-reverse=0 --frag-sni-pos=1 --frag-middle-sni=0 --seg2delay=100 &
+/tmp/dpi/youtubeUnblock --fake-sni-type=custom --fake-custom-payload=00 --fake-sni-seq-len=10 --frag-sni-faked=1 --frag-sni-reverse=0 --frag-sni-pos=1 --frag-middle-sni=0 --seg2delay=100 --quic-drop &
 ```
 
 for all sites
 ```text
-/tmp/dpi/youtubeUnblock --fake-sni-type=custom --fake-custom-payload=00 --fake-sni-seq-len=10 --frag-sni-faked=1 --frag-sni-reverse=0 --frag-sni-pos=1 --frag-middle-sni=0 --seg2delay=100 --sni-domains=all &
+/tmp/dpi/youtubeUnblock --fake-sni-type=custom --fake-custom-payload=00 --fake-sni-seq-len=10 --frag-sni-faked=1 --frag-sni-reverse=0 --frag-sni-pos=1
+ --frag-middle-sni=0 --seg2delay=100 --quic-drop --sni-domains=all &
 ```
 
 close telnet window
