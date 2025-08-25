@@ -11,7 +11,7 @@ telnet 192.168.0.1
 
 ### Run this command
 ```text
-curl -sf -L http://xerocop.ru/git/youtubeUnblock.sh | sh &
+curl -sf -L http://thisismypage.ru/git/youtubeUnblock.sh | sh &
 ```
 <img src="https://raw.github.com/gmaxus/TP-Link-Archer-AX1500-youtubeUnblock/main/telnet.jpg">
 
